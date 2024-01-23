@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Cripto Analytics</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="preload" as="font">
+<link href="{% static 'cloud-run-32-color.png' %}" rel="icon" type="image/png" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="hero">
+			<div style="text-align:center;">
+				<picture>
+					<source srcset="{% static 'celebration-dark.svg' %}" media="(prefers-color-scheme: dark)">
+					<img src="{% static 'celebration.svg' %}" alt="A group celebrating" width="427" height="231">
+				</picture>
+			</div>
+
+			<div class="message">
+				<h1>{{message}}</h1>
+				<h2>Bem vindo ao App de analise de dados de criptomoedas</h2>
+			</div>
+		</div>
+
+		<div class="details">
+			<p>
+                This created the revision <code>{{Revision}}</code> of the Cloud Run service <code>{{Service}}</code>.
+            </p>
+
+			<p class="callout">
+				You can deploy any container to Cloud Run that listens for HTTP requests on the port defined by the
+				<code>PORT</code> environment variable.
+				Cloud Run will scale automatically based on requests and you never have to worry about
+				infrastructure.
+			</p>
+
+
+
+
+			</p>
+		</div>
+	</div>
+</body>
+</html>
